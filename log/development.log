@@ -388,3 +388,18 @@ Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.3ms)[0m  INSERT INTO "songs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "A new Song"], ["created_at", "2018-08-29 14:05:31.923362"], ["updated_at", "2018-08-29 14:05:31.923362"]]
   [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/songs/1" for 104.244.193.160 at 2018-08-29 14:05:51 +0000
+Cannot render console from 104.244.193.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.2ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered songs/show.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 217ms (Views: 194.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 104.244.193.160 at 2018-08-29 14:05:52 +0000
+Cannot render console from 104.244.193.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
